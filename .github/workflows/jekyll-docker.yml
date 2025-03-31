@@ -1,4 +1,6 @@
 name: Test Github Environments
+env:
+  IMAGE_TAG: ${{ github.sha }}
 
 on:
   push:
@@ -17,5 +19,6 @@ jobs:
     - name: Checking...
       run: |
         echo "Deploying to the environment: ${{ github.ref_name }}"
+        echo "Deploying tag: ${IMAGE_TAG}"
         echo "Secret value: ${{ secrets.NAM }}"
         echo "Variable value: ${{ vars.VAR }}"
