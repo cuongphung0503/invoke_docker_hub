@@ -19,7 +19,7 @@ jobs:
     - name: Checking...
       run: |
         echo "Deploying to the environment: ${{ github.ref_name }}"
-        echo "$GITHUB_SHA"
+        echo "A: $GITHUB_SHA"
         echo "Deploying tag: ${IMAGE_TAG}"
         echo "Secret value: ${{ secrets.NAM }}"
         echo "Variable value: ${{ vars.VAR }}"
