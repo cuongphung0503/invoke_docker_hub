@@ -1,4 +1,4 @@
-name: Test Github Environments
+name: "[TEST] actions"
 env:
   IMAGE_TAG: ${{ github.sha }}
 
