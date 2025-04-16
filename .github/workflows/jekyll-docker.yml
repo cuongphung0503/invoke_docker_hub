@@ -19,9 +19,15 @@ jobs:
     - uses: actions/checkout@v4
     - name: Checking...
       run: |
+        
+      
         for i in {1..5}
         do
-          echo "🔁 Looping number $i"
+          if [ -d "/webroot" ]; then
+            echo "🔁 Looping number $i"
+          else
+            echo "fail"
+          fi
         done
         
         echo "Deploying to the environment: ${{ github.ref_name }}"
