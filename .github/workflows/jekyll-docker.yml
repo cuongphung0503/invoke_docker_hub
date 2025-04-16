@@ -3,6 +3,7 @@ env:
   IMAGE_TAG: ${{ github.sha }}
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "**" ]
   pull_request:
